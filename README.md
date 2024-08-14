@@ -1,4 +1,35 @@
 # MLOps Prototype mlflow UI and dagshub.com
+This summary encapsulates the key steps you took in your ML Ops prototype, highlighting the use of MLflow for tracking, comparing, and deploying models, and the public production deployment using DagsHub.
+
+### **Step 1: Experiment Setup**
+- **Environment**: MLflow was used as the primary tool for tracking experiments and managing models.
+- **Synthetic Dataset**: A synthetic dataset was created and utilized to train four different machine learning models.
+- **Experiment Tracking**: Each model's performance was tracked within the MLflow UI, under the "Experiments" tab.
+
+### **Step 2: Model Training**
+- **Models Trained**:
+  - XGBoost Classifier with SMOTE
+  - XGBoost Classifier (without SMOTE)
+  - Random Forest
+  - Logistic Regression
+- **Metrics Evaluation**: Each model was evaluated based on key metrics such as accuracy, F1 score, recall, etc., as displayed in the MLflow UI.
+
+### **Step 3: Model Comparison**
+- **Comparison of Models**: Using the MLflow UI, a parallel coordinates plot was generated to visually compare the performance of the four models based on various parameters (e.g., `eval_metric`, `max_depth`).
+- **Selection**: Based on the comparison, the XGBoost Classifier with SMOTE was identified as the best-performing model.
+
+### **Step 4: Deployment Strategy**
+- **Challenger and Champion Concept**:
+  - The selected XGBoost Classifier with SMOTE was designated as the "Champion" model and deployed.
+  - A second model was chosen as a "Challenger" to be used for comparison against the Champion model in production.
+- **Model Registration**: The models were registered in the MLflow Model Registry, and an alias was added for the model version (e.g., "challenger").
+
+### **Step 5: Productionization**
+- **DagsHub Integration**: The final step was to integrate the MLflow tracking server with DagsHub, enabling the production deployment of the chosen model to a public URL.
+- **Public Access**: The deployed model and its experiments are accessible via a public URL on DagsHub, allowing for ongoing monitoring and evaluation.
+
+### **Outcome**
+- **ML Ops Pipeline**: The entire ML Ops pipeline, from experiment tracking to model deployment, was successfully implemented using MLflow and DagsHub, ensuring a reproducible and scalable machine learning workflow.
 
  
  ![image](https://github.com/user-attachments/assets/41ae2113-5eb5-48fe-a2fe-df0d9e2b7ae4)
@@ -62,4 +93,4 @@
 ![image](https://github.com/user-attachments/assets/364c0a70-f66c-46ae-bfc7-9f1f642b8d2e)
 
 
-https://dagshub.com/
+
