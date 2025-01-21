@@ -1,5 +1,5 @@
 # MLOps Prototype mlflow UI and dagshub.com
-This summary encapsulates the key steps you took in your ML Ops prototype, highlighting the use of MLflow for tracking, comparing, and deploying models, and the public production deployment using DagsHub.
+ ML Ops prototype, use of MLflow for tracking, comparing, and deploying models, and the public production deployment using DagsHub.
 
 ### **Step 1: Experiment Setup**
 - **Environment**: MLflow was used as the primary tool for tracking experiments and managing models.
